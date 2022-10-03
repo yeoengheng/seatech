@@ -25,7 +25,7 @@ const Header = () => {
                 display="flex"
                 alignItems="center"
               >
-                <Image w={10} src="https://png.pngtree.com/template/20200316/ourmid/pngtree-bird-blue-logo-template-image_354657.jpg" />
+                <Image w={10} src="https://png.pngtree.com/template/20200316/ourmid/pngtree-bird-blue-logo-template-image_354657.jpg" alt="logo"/>
                 <VisuallyHidden>Choc</VisuallyHidden>
               </chakra.a>
               <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">

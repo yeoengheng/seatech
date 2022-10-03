@@ -22,7 +22,7 @@ const Card = (props)=>{
                 maxW="2xl"
                 flexDirection="row"
                 >
-                <Image h={100} w={100} mt={4} mr={8} src={logo}/>    
+                <Image h={100} w={100} mt={4} mr={8} src={logo} alt="logo"/>    
                 <Box mt={2}>
                     <Text
                         fontSize="20"
