@@ -1,7 +1,5 @@
 import Banner from '../components/banner';
-import Content from '../components/content';
 import Header from '../components/header';
-import Card from '../components/card';
 import CardList from '../components/cardList';
 
 const cardData = [{
