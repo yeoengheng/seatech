@@ -45,7 +45,7 @@ const Header = () => {
                   md: "inline-flex",
                 }}
               >
-                <Button variant="ghost">About</Button>
+                {/* <Button variant="ghost">About</Button> */}
                 <Button variant="ghost">Resources</Button>
               </HStack>
               <Submit></Submit>
