@@ -1,10 +1,12 @@
 import { Divider, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue, Icon } from "@chakra-ui/react";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import Submit from "./submit";
 
 const Header = () => {
     const bg = useColorModeValue("white", "gray.800");
     const mobileNav = useDisclosure();
+  
     return (
       <>
         <chakra.header
@@ -21,15 +23,16 @@ const Header = () => {
             <Flex>
               <chakra.a
                 href="/"
-                title="Choc Home Page"
+                title="Tech in SEA Directory"
                 display="flex"
                 alignItems="center"
+                justifyContent="center"
               >
-                <Image w={10} src="https://png.pngtree.com/template/20200316/ourmid/pngtree-bird-blue-logo-template-image_354657.jpg" alt="logo"/>
-                <VisuallyHidden>Choc</VisuallyHidden>
+                <Image w= "14" src="https://i.ibb.co/MSQ2GCG/asd.png" alt="logo"/>
+                <VisuallyHidden>Tech in SEA</VisuallyHidden>
               </chakra.a>
               <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-                Tech in South East Asia
+                Tech in SEA
               </chakra.h1>
             </Flex>
             <HStack display="flex" alignItems="center" spacing={1}>
@@ -45,9 +48,8 @@ const Header = () => {
                 <Button variant="ghost">About</Button>
                 <Button variant="ghost">Resources</Button>
               </HStack>
-              <Button color={"white"} bg={"blue.300"} size="sm">
-                Submit Company
-              </Button>
+              <Submit></Submit>
+
               <Box
                 display={{
                   base: "inline-flex",

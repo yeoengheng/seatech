@@ -1,4 +1,5 @@
-import { Text, Flex, Box, Badge, Image, HStack } from "@chakra-ui/react"
+import { Text, Flex, Box, Badge, Image, Tag, TagLeftIcon, TagLabel } from "@chakra-ui/react"
+import { MoonIcon } from "@chakra-ui/icons"
 
 const Card = (props)=>{
     const title = props.title
@@ -9,7 +10,7 @@ const Card = (props)=>{
     return(
     <>
     <Flex 
-        p={5} w="full" 
+        p={1} w="full" 
         alignItems="center"
         justifyContent="center"> 
             <Flex 
@@ -43,34 +44,14 @@ const Card = (props)=>{
                     >
                         {desc}
                     </Text>
-                    <Badge
-                        mr={2}
-                        mt={2}
-                        fontSize="xs"
-                        letterSpacing="wide"
-                        colorScheme={"blue"}  
-                        variant='solid'
-                        fontWeight="medium"
-                        rounded="full"
-                        px={4}
-                        py={1}
-                        >
-                        {cat}
-                    </Badge>
-                    <Badge
-                        mr={2}
-                        mt={2}
-                        fontSize="xs"
-                        letterSpacing="wide"
-                        colorScheme={"green"}
-                        variant="subtle"
-                        fontWeight="medium"
-                        rounded="full"
-                        px={4}
-                        py={1}
-                        >
-                        {country}
-                    </Badge>
+                    <Tag size="md" mr={2} mt={2} variant="subtle">
+                        <TagLeftIcon as={MoonIcon}></TagLeftIcon>
+                        <TagLabel>{cat}</TagLabel>
+                    </Tag>
+                    <Tag size="md" mr={2} mt={2} variant="subtle">
+                        <TagLeftIcon as={MoonIcon}></TagLeftIcon>
+                        <TagLabel>{country}</TagLabel>
+                    </Tag>
                 </Box>
 
             </Flex>  
