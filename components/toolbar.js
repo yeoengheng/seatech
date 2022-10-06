@@ -2,7 +2,7 @@ import { Input, Flex, Spacer, Select, HStack} from "@chakra-ui/react";
 
 const Toolbar = ()=>{
     return(
-        <HStack spacing={1}>
+        <HStack w="auto" spacing={1}>
                 <Input  size={'sm'} w={300}  placeholder="Search"/>
                 <Spacer/>
                 <Select size={'sm'} maxW={130} placeholder='Category'>
