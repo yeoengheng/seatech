@@ -56,7 +56,7 @@ const Card = (props)=>{
 
             </Flex>  
 
-    </Flex>;
+    </Flex>
     </>
 
     )

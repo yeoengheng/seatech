@@ -1,4 +1,4 @@
-import { Divider, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue, Icon } from "@chakra-ui/react";
+import { Divider, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Submit from "./submit";
@@ -46,7 +46,7 @@ const Header = () => {
                 }}
               >
                 {/* <Button variant="ghost">About</Button> */}
-                <Button variant="ghost">Resources</Button>
+                <Button variant="ghost">Deals</Button>
               </HStack>
               <Submit></Submit>
 
