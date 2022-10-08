@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { table, minifyRecords } from "./utils";
+import { table, minifyRecords } from "./utils/airtable";
 const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app3CEjm4eyYVZwaR');
 
 

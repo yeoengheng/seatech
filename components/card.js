@@ -1,6 +1,6 @@
 import { Text, Flex, Box, Link, Image, Tag, TagLeftIcon, TagLabel, Icon } from "@chakra-ui/react"
-import { MoonIcon } from "@chakra-ui/icons"
 import {BsLinkedin, BsGlobe} from 'react-icons/bs'
+import {MdFlag, MdCategory} from 'react-icons/md'
 
 
 const Card = (props)=>{
@@ -58,12 +58,12 @@ const Card = (props)=>{
                     >
                         {desc}
                     </Text>
-                    <Tag size="md" mr={2} mt={2} variant="subtle">
-                        <TagLeftIcon as={MoonIcon}></TagLeftIcon>
+                    <Tag bg="teal.500" fontWeight="normal" color="white" size="md" mr={2} mt={2} variant="subtle">
+                        <TagLeftIcon as={MdCategory}></TagLeftIcon>
                         <TagLabel>{cat}</TagLabel>
                     </Tag>
-                    <Tag size="md" mr={2} mt={2} variant="subtle">
-                        <TagLeftIcon as={MoonIcon}></TagLeftIcon>
+                    <Tag bg="red.600" fontWeight="normal" color="white" size="md" mr={2} mt={2} variant="subtle">
+                        <TagLeftIcon as={MdFlag}></TagLeftIcon>
                         <TagLabel>{country}</TagLabel>
                     </Tag>
                 </Box>

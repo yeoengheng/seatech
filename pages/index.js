@@ -1,7 +1,7 @@
 import Banner from '../components/banner';
 import Header from '../components/header';
 import CardList from '../components/cardList';
-import { table, minifyRecords } from './api/utils';
+import { table, minifyRecords } from './api/utils/airtable';
 import Toolbar from '../components/toolbar';
 import { Flex } from '@chakra-ui/react';
 import { useState } from 'react';
