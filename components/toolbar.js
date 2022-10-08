@@ -11,13 +11,14 @@ const Toolbar = (props)=>{
                 <Spacer/>
                 <Select size={'sm'} maxW={130} placeholder='Category'onChange={props.filterCat}>
                     {uniqueCat?.map((cat)=>(
-                        <option value ={cat}>{cat}</option>
+                        <option key={cat} value ={cat}>{cat}</option>
                     ))}
                 </Select>
                 <Spacer/>
                 <Select size={'sm'} maxW={130} placeholder='Country'onChange={props.filterCountry}>
                     {uniqueCountry?.map((country)=>(
-                        <option value ={country}>{country}</option>
+                        
+                        <option key={country} value ={country}>{country}</option>
                     ))}
                 </Select>
         </HStack>

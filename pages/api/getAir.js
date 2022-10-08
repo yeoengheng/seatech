@@ -3,7 +3,7 @@ import { table, minifyRecords } from "./utils";
 const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app3CEjm4eyYVZwaR');
 
 
-export default async (req, res)=> {
+export default async (req, res) => {
   try{
   const records = await table.select({
       //fields:['Company',"Website",'Description','Logo'],
