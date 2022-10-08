@@ -16,7 +16,8 @@ const getMinifiedRecord=(record)=>{
     logo:record.fields.Logo,
     desc:record.fields.Description,
     country:record.fields.Country,
-    cat:record.fields.Category
+    cat:record.fields.Category,
+    linkedin:record.fields.LinkedIn
 
   }
 }

@@ -23,16 +23,16 @@ const Header = () => {
             <Flex>
               <chakra.a
                 href="/"
-                title="Tech in SEA Directory"
+                title="Startup in SEA"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
               >
                 <Image w= "14" src="https://i.ibb.co/MSQ2GCG/asd.png" alt="logo"/>
-                <VisuallyHidden>Tech in SEA</VisuallyHidden>
+                <VisuallyHidden>Startup in SEA</VisuallyHidden>
               </chakra.a>
               <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-                Tech in SEA
+              Startup in SEA
               </chakra.h1>
             </Flex>
             <HStack display="flex" alignItems="center" spacing={1}>
@@ -92,11 +92,11 @@ const Header = () => {
                     onClick={mobileNav.onClose}
                   />
   
-                  <Button w="full" variant="ghost">
+                  {/* <Button w="full" variant="ghost">
                     About
-                  </Button>
+                  </Button> */}
                   <Button w="full" variant="ghost">
-                    Resources
+                    Deals
                   </Button>
                 </VStack>
               </Box>
