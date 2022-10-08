@@ -1,6 +1,8 @@
 import { Text, Flex, Box, Link, Image, Tag, TagLeftIcon, TagLabel, Icon } from "@chakra-ui/react"
 import { MoonIcon } from "@chakra-ui/icons"
-import { Language, LinkedIn } from "@mui/icons-material"
+//import Language from "@mui/icons-material"
+//import LinkedIn from "@mui/icons-material"
+
 
 const Card = (props)=>{
     const title = props.title
@@ -40,12 +42,12 @@ const Card = (props)=>{
                     >
                         {title}
                         </Text>
-                        <Link mt={2} href={site} target="_blank">
+                        {/* <Link mt={2} href={site} target="_blank">
                             <Icon as={Language}></Icon>
                         </Link>
                         <Link mt={2} href={linkedin} target="_blank">
                             <Icon as={LinkedIn} color="blue.500" mr={1}></Icon>
-                        </Link>
+                        </Link> */}
                     </Flex>
                     <Text
                         mt={1}
