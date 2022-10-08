@@ -1,6 +1,6 @@
 import Airtable from "airtable";
 import { table, minifyRecords } from "./utils";
-const base = new Airtable({apiKey: 'keydFfZB26XVZRPne'}).base('app3CEjm4eyYVZwaR');
+const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app3CEjm4eyYVZwaR');
 
 
 export default async (req, res)=> {
@@ -17,9 +17,6 @@ export default async (req, res)=> {
   res.status(500).json({msg:'Something went wrong'})
   }
 }
-
-
-
 
 // const data =[]
 // export async function loadData(){

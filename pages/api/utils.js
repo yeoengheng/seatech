@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-const base = new Airtable({apiKey: 'keydFfZB26XVZRPne'}).base('app3CEjm4eyYVZwaR');
+const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app3CEjm4eyYVZwaR');
 const table = base('Competitors')
 
 const minifyRecords=(records)=>{
