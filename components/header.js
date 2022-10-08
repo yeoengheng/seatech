@@ -1,4 +1,4 @@
-import { Divider, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue } from "@chakra-ui/react";
+import { Divider, Link, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Submit from "./submit";
@@ -6,7 +6,6 @@ import Submit from "./submit";
 const Header = () => {
     const bg = useColorModeValue("white", "gray.800");
     const mobileNav = useDisclosure();
-  
     return (
       <>
         <chakra.header
@@ -46,7 +45,7 @@ const Header = () => {
                 }}
               >
                 {/* <Button variant="ghost">About</Button> */}
-                <Button variant="ghost">Deals</Button>
+                <Button variant="ghost"><Link href="/deals">Deals</Link></Button>
               </HStack>
               <Submit></Submit>
 
@@ -96,7 +95,7 @@ const Header = () => {
                     About
                   </Button> */}
                   <Button w="full" variant="ghost">
-                    Deals
+                  <Link href="/deals">Deals</Link>
                   </Button>
                 </VStack>
               </Box>
