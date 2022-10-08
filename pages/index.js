@@ -2,6 +2,10 @@ import Banner from '../components/banner';
 import Header from '../components/header';
 import CardList from '../components/cardList';
 import { table, minifyRecords } from './api/utils';
+import Toolbar from '../components/toolbar';
+import { Flex } from '@chakra-ui/react';
+import { useState } from 'react';
+
 
 const value =[
   {
@@ -56,12 +60,43 @@ const value =[
 ]
 
 export default function Home(props) {
+  const loadData = props.load 
+  const [card, setCard] = useState(props.load)
+  const [searchPhrase, setSearchPhrase] = useState("")
+  const search = (event)=>{
+    const matchedUsers = loadData.filter((card)=>{
+      return card.title.toLowerCase().includes(event.target.value.toLowerCase())
+    })
+    setCard(matchedUsers)
+    setSearchPhrase(event.target.value)
+  }
+  const filterCountry = (event)=>{
+    const filteredCards = loadData.filter((card)=>{
+      return card.country.includes(event.target.value)
+    })
+    setCard(filteredCards)
+  }
+  const filterCat = (event)=>{
+    const filteredCards = loadData.filter((card)=>{
+      return card.cat.includes(event.target.value)
+    })
+    setCard(filteredCards)
+  }
+
   return (
     <>
       <Banner></Banner>
       <Header></Header>
-      {/* <CardList cards={value}></CardList> */}
-      <CardList cards={props.load}></CardList>
+      <Flex direction={"column"} pt={7} align={"center"}>
+        <Toolbar 
+          searchPhrase={searchPhrase} 
+          search={search} 
+          filterCountry = {filterCountry} 
+          filterCat = {filterCat} 
+          cards= {loadData}>
+        </Toolbar>
+        <CardList cards={card}></CardList>
+      </Flex>
     </>
   )
 }
