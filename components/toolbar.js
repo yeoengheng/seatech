@@ -1,8 +1,8 @@
 import { Input, Spacer, Select, HStack} from "@chakra-ui/react";
 
 const Toolbar = (props)=>{
-    const uniqueCat = props.cards?.map(cat => cat.cat).filter((value, index, self)=>self.indexOf(value)===index)
-    const uniqueCountry = props.cards?.map(country => country.country).filter((value, index, self)=>self.indexOf(value)===index)
+    const uniqueCat = props.cards?.map(cat => cat.cat).filter((value, index, self)=>self.indexOf(value)===index).sort()
+    const uniqueCountry = props.cards?.map(country => country.country).filter((value, index, self)=>self.indexOf(value)===index).sort()
 
     
     return(
@@ -17,7 +17,6 @@ const Toolbar = (props)=>{
                 <Spacer/>
                 <Select size={'sm'} maxW={130} placeholder='Country'onChange={props.filterCountry}>
                     {uniqueCountry?.map((country)=>(
-                        
                         <option key={country} value ={country}>{country}</option>
                     ))}
                 </Select>
