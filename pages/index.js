@@ -107,7 +107,7 @@ export async function getServerSideProps(context){
       //fields:['Company',"Website",'Description','Logo'],
       filterByFormula:"{Done?}!=FALSE()",
       view: "👀 Overview"
-  }).firstPage();
+  }).all();
   return{
     props:{
       load:minifyRecords(records)
