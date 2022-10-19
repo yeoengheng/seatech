@@ -56,8 +56,9 @@ const Deal = (props)=>{
                 >
                     <Spacer></Spacer>
                     <Button
-                        px={10}
-                        py={2}
+                        px={5}
+                        py={1}
+                        mb={2}
                         bg="#1e0b47"
                         fontSize="md"
                         color="white"

@@ -27,7 +27,7 @@ const Header = () => {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Image w={28} src="https://i.ibb.co/d7GHzwG/sea-1841.png" alt="logo"/>
+                <Image h={10} src="https://i.ibb.co/GP52gN8/sea-1840.png" alt="logo"/>
                 <VisuallyHidden>SEASU</VisuallyHidden>
               </chakra.a>
               {/* <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
@@ -61,7 +61,7 @@ const Header = () => {
                     md: "none",
                   }}
                   aria-label="Open menu"
-                  fontSize="20px"
+                  fontSize="18px"
                   color="gray.800"
                   _dark={{
                     color: "inherit",
