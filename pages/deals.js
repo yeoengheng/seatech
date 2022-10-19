@@ -17,7 +17,7 @@ const deals =[
         discount:"Drift's Conversation Cloud helps businesses connect with customers in the moments that matter most."
     },
     {
-        name:"15% off annual subscription",
+        name:"1:1 Annual subscription",
         link:"https://www.masterclass.com/?utm_medium=POD&utm_term=Aq-Prospecting&utm_content=STARTUPS&utm_campaign=AAP&utm_source=Paid&promo_id=startups",
         img:"https://bestreviews.net/wp-content/uploads/masterclass-logo.png",
         discount:"MasterClass is the streaming platform where anyone can learn from the world's best."

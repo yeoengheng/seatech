@@ -27,12 +27,12 @@ const Header = () => {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Image w= "14" src="https://i.ibb.co/MSQ2GCG/asd.png" alt="logo"/>
+                <Image w={16} h={16} src="https://i.ibb.co/RhQNQKS/sea-1842.png" alt="logo"/>
                 <VisuallyHidden>SEASU</VisuallyHidden>
               </chakra.a>
-              <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
+              {/* <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
               SEASU
-              </chakra.h1>
+              </chakra.h1> */}
             </Flex>
             <HStack display="flex" alignItems="center" spacing={1}>
               <HStack
