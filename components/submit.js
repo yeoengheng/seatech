@@ -10,7 +10,7 @@ const Submit = ()=>{
     }
     return(
         <>
-        <Button color={"white"} bg={"#16426E"} size="md" onClick={goToEmail}>
+        <Button color={"white"} bg={"#07956c"} size="md" onClick={goToEmail}>
             Contact Us
         </Button>
         {/* <Modal isOpen={isOpen} onClose={onClose}>

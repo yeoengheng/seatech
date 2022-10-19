@@ -4,7 +4,7 @@ import CardList from '../components/cardList';
 import { table, minifyRecords } from './api/utils/airtable';
 import Toolbar from '../components/toolbar';
 import { Flex } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const value =[
@@ -61,8 +61,10 @@ const value =[
 
 export default function Home(props) {
   const loadData = props.load 
-  const [card, setCard] = useState(props.load)
+  const [card, setCard] = useState(loadData)
   const [searchPhrase, setSearchPhrase] = useState("")
+  const [catSet, setCat] = useState([])
+  const [countrySet, setCountry] = useState([])
   const search = (event)=>{
     const matchedUsers = loadData.filter((card)=>{
       return card.title.toLowerCase().includes(event.target.value.toLowerCase())
@@ -70,18 +72,40 @@ export default function Home(props) {
     setCard(matchedUsers)
     setSearchPhrase(event.target.value)
   }
+
   const filterCountry = (event)=>{
-    const filteredCards = loadData.filter((card)=>{
-      return card.country.includes(event.target.value)
-    })
-    setCard(filteredCards)
-  }
+    return setCountry(event.target.value)
+  }  
   const filterCat = (event)=>{
-    const filteredCards = loadData.filter((card)=>{
-      return card.cat.includes(event.target.value)
+    console.log(event.target.value)
+    return setCat(event.target.value)
+  }  
+  const filterAll = ()=>{
+    const countryFilter = loadData.filter((card)=>{
+      return card.country.includes(countrySet)
     })
-    setCard(filteredCards)
+    const catFilter = countryFilter.filter((card)=>{
+      return card.cat.includes(catSet)
+    })
+    setCard(catFilter)
   }
+  // const filterCountry = (event)=>{
+  //   const filteredCards = loadData.filter((card)=>{
+  //     return card.country.includes(event.target.value)
+  //   })
+  //   setCard(filteredCards)
+  // }
+  // const filterCat = (event)=>{
+  //   const filteredCards = loadData.filter((card)=>{
+  //     return card.cat.includes(event.target.value)
+  //   })
+  //   setCard(filteredCards)
+  // }
+  
+  useEffect(()=>{
+    filterAll()
+  },[catSet,countrySet])
+
 
   return (
     <>

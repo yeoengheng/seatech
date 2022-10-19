@@ -28,10 +28,10 @@ const Header = () => {
                 justifyContent="center"
               >
                 <Image w= "14" src="https://i.ibb.co/MSQ2GCG/asd.png" alt="logo"/>
-                <VisuallyHidden>Startup in SEA</VisuallyHidden>
+                <VisuallyHidden>SEASU</VisuallyHidden>
               </chakra.a>
               <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Startup in SEA
+              SEASU
               </chakra.h1>
             </Flex>
             <HStack display="flex" alignItems="center" spacing={1}>

@@ -9,7 +9,7 @@ export default async (req, res) => {
       //fields:['Company',"Website",'Description','Logo'],
       filterByFormula:"{Done?}!=FALSE()",
       view: "👀 Overview"
-  }).firstPage()
+  }).all()
   const minifiedRecords = minifyRecords(records)
   res.status(200).json(minifiedRecords)
   }
