@@ -1,25 +1,26 @@
-import { Flex,Box, Button, Image, Text } from "@chakra-ui/react"
 import Header from "../components/header"
 import Banner from '../components/banner';
+import Deal from "../components/deal";
+import {SimpleGrid } from "@chakra-ui/react";
 
 const deals =[
     {
-        name:"Deel",
-        link:"https://www.drift.com/solutions/startups/",
-        img:"https://i.pinimg.com/originals/36/7e/4e/367e4ea27f1df3b850b13675c1517480.png",
-        discount:"Startup discount: 93% off the original price."
+        name:"Startup Discount",
+        link:"https://www.deel.com/register-your-startup#:~:text=Register%20your%20startup%20to%20get,verify%20and%20apply%20your%20discount.",
+        img:"https://squeezegrowth.com/wp-content/uploads/2021/12/deel-payroll-exclusive-discount-offer-featured.png",
+        discount:"Hire contractors for 3 months free, then 50% off your first year."
     },
     {
-        name:"Drift",
+        name:"93% off original price",
         link:"https://www.drift.com/solutions/startups/",
-        img:"https://i.pinimg.com/originals/36/7e/4e/367e4ea27f1df3b850b13675c1517480.png",
-        discount:"Startup discount: 93% off the original price."
+        img:"https://cdn.worldvectorlogo.com/logos/drift-logo.svg",
+        discount:"Drift's Conversation Cloud helps businesses connect with customers in the moments that matter most."
     },
     {
-        name:"Deel",
-        link:"https://www.drift.com/solutions/startups/",
-        img:"https://i.pinimg.com/originals/36/7e/4e/367e4ea27f1df3b850b13675c1517480.png",
-        discount:"Startup discount: 93% off the original price."
+        name:"15% off annual subscription",
+        link:"https://www.masterclass.com/?utm_medium=POD&utm_term=Aq-Prospecting&utm_content=STARTUPS&utm_campaign=AAP&utm_source=Paid&promo_id=startups",
+        img:"https://bestreviews.net/wp-content/uploads/masterclass-logo.png",
+        discount:"MasterClass is the streaming platform where anyone can learn from the world's best."
     }
 ]
 
@@ -28,14 +29,13 @@ export default function Deals(){
         <>
         <Banner></Banner>
         <Header></Header>
-        <Flex direction={"column"} pt={7} align={"center"}>
-            <Flex w={250} m={3} p={5}  outline="solid" outlineColor="gray.100" alignItems="center" direction="column">
-                <Image w={200} src="https://seeklogo.com/images/N/notion-logo-4CE8FBF5C5-seeklogo.com.png">
-                </Image>
-                <Text align="center" mt={5}>{deals.name}</Text>
-                <Button mt={5} size="md" color={"white"} bg={"#16426E"}>Get Deal</Button>
-            </Flex>
-        </Flex>
+        <SimpleGrid minChildWidth='200px' spacing='30px' px={5}>
+        {deals?.map((deal)=> (
+                <Deal key={deal.name} title={deal.name} desc={deal.discount} img={deal.img} link={deal.link}/>
+            ))}   
+        </SimpleGrid>
+
+
         </>
     )
 }
