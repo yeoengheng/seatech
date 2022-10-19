@@ -27,7 +27,7 @@ const Header = () => {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Image w={16} h={16} src="https://i.ibb.co/RhQNQKS/sea-1842.png" alt="logo"/>
+                <Image w={28} src="https://i.ibb.co/d7GHzwG/sea-1841.png" alt="logo"/>
                 <VisuallyHidden>SEASU</VisuallyHidden>
               </chakra.a>
               {/* <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">

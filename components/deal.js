@@ -32,7 +32,7 @@ const Deal = (props)=>{
                         color: "white",
                         }}
                         fontWeight="bold"
-                        fontSize="2xl"
+                        fontSize="xl"
                     >
                         {title}
                     </chakra.h1>
@@ -58,7 +58,7 @@ const Deal = (props)=>{
                     <Button
                         px={10}
                         py={2}
-                        bg="#0c2c6a"
+                        bg="#1e0b47"
                         fontSize="md"
                         color="white"
                         fontWeight="bold"
