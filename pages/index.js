@@ -49,7 +49,6 @@ export default function Home(props) {
         <title>SEA Startup Directory</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content='A simple directory of all South East Asia Tech Startups'/>
-        <html lang='en'/>
       </Head>
       <Banner></Banner>
       <Header></Header>
