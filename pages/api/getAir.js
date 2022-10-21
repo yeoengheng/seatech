@@ -6,7 +6,7 @@ const base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app3CEjm
 export default async (req, res) => {
   try{
   const records = await table.select({
-      //fields:['Company',"Website",'Description','Logo'],
+      fields:['Company',"Website",'Description','Logo'],
       filterByFormula:"{Done?}!=FALSE()",
       view: "👀 Overview"
   }).all()
@@ -17,28 +17,3 @@ export default async (req, res) => {
   res.status(500).json({msg:'Something went wrong'})
   }
 }
-
-// const data =[]
-// export async function loadData(){
-//     base('Competitors').select({
-//         fields:['Company',"Website",'Description','Logo'],
-//         filterByFormula:"{Done?}!=FALSE()",
-//         view: "👀 Overview"
-//       })
-//       .eachPage(function page(records, fetchNextPage) {
-//         records.forEach(function(record) {
-//             const company={}
-//             company['title']=record.get('Company')
-//             company['logo']=record.get('Logo')
-//             company['desc']=record.get('Description')
-//             company['site']=record.get('Website')
-//             data.push(company)
-//         });
-//         fetchNextPage();
-//       }, function done(err) {
-//             console.log(data)
-//           if (err) { console.error(err); return; }
-//       });
-//     return (data)
-// }
-
