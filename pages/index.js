@@ -20,7 +20,6 @@ export default function Home(props) {
     setCard(matchedUsers)
     setSearchPhrase(event.target.value)
   }
-
   const filterCountry = (event)=>{
     return setCountry(event.target.value)
   }  
@@ -37,12 +36,9 @@ export default function Home(props) {
     })
     setCard(catFilter)
   }
-
   useEffect(()=>{
     filterAll()
   },[catSet,countrySet])
-
-
   return (
     <>
       <Head>
@@ -52,7 +48,8 @@ export default function Home(props) {
         <link rel="manifest" href="/site.webmanifest"></link>
         <title>SEA Startup Directory</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
+        <meta name="description" content='A simple directory of all South East Asia Tech Startups'/>
+        <html lang='en'/>
       </Head>
       <Banner></Banner>
       <Header></Header>
@@ -73,6 +70,7 @@ export default function Home(props) {
 export async function getServerSideProps(context){
   try{
     const records = await table.select({
+      fields:['Company',"Website",'Description','Logo','LinkedIn','Country','Category'],
       filterByFormula:"{Done?}!=FALSE()",
       view: "👀 Overview"
   }).all();

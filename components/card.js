@@ -40,11 +40,11 @@ const Card = (props)=>{
                     >
                         {title}
                         </Text>
-                        <Link mt={2} mr={1} href={site} target="_blank">
+                        <Link mt={2} mr={2} href={site} target="_blank" alt="Website">
                             <Icon as={BsGlobe}></Icon>
                         </Link>
-                        <Link mt={2} href={linkedin} target="_blank">
-                            <Icon as={BsLinkedin} color="blue.500" mr={1}></Icon>
+                        <Link mt={2} href={linkedin} target="_blank" alt="LinkedIn">
+                            <Icon as={BsLinkedin} color="blue.500"></Icon>
                         </Link>
                     </Flex>
                     <Text
