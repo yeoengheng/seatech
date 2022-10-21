@@ -70,7 +70,7 @@ export default function Home(props) {
 export async function getServerSideProps(context){
   try{
     const records = await table.select({
-      fields:['Company',"Website",'Description','Logo','LinkedIn','Country','Category'],
+      // fields:['Company',"Website",'Description','Logo','LinkedIn','Country','Category'],
       filterByFormula:"{Done?}!=FALSE()",
       view: "👀 Overview"
   }).all();
