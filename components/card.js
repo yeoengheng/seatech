@@ -1,7 +1,6 @@
-import { Text, Flex, Box, Link, Image, Tag, TagLeftIcon, TagLabel, Icon } from "@chakra-ui/react"
+import { Text, Flex, Box, Link, Tag, TagLeftIcon, Image, TagLabel, Icon } from "@chakra-ui/react"
 import {BsLinkedin, BsGlobe} from 'react-icons/bs'
 import {MdFlag, MdCategory} from 'react-icons/md'
-
 
 const Card = (props)=>{
     const title = props.title
@@ -27,7 +26,7 @@ const Card = (props)=>{
                 maxW="2xl"
                 flexDirection="row"
                 >
-                <Image h={100} w={100} mt={4} mr={8} src={logo} alt="logo"/>    
+                <Image height={100} width={100} mt={4} mr={8} src={logo} alt="logo"/>    
                 <Box mt={2}>
                     <Flex flexDirection="row" alignItems='center'>
                         <Text

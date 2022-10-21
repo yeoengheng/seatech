@@ -5,10 +5,10 @@ import {SimpleGrid } from "@chakra-ui/react";
 
 const deals =[
     {
-        name:"Startup Discount",
-        link:"https://www.deel.com/register-your-startup#:~:text=Register%20your%20startup%20to%20get,verify%20and%20apply%20your%20discount.",
+        name:"Exclusive SEASU Discount",
+        link:"https://get.deel.com/swghvc8wlxs1",
         img:"https://squeezegrowth.com/wp-content/uploads/2021/12/deel-payroll-exclusive-discount-offer-featured.png",
-        discount:"Hire contractors for 3 months free, then 50% off your first year."
+        discount:"10% off contracts and full-time employees"
     },
     {
         name:"93% off original price",

@@ -1,7 +1,10 @@
-import { Divider, Link, chakra, Flex, VisuallyHidden, HStack,Image, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue } from "@chakra-ui/react";
+import { Divider, Link, chakra, Flex, VisuallyHidden, HStack, Button, Box, IconButton, CloseButton, VStack, useDisclosure, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Submit from "./submit";
+import Image from 'next/future/image'
+import logo from '../public/logo.png'
+
 
 const Header = () => {
     const bg = useColorModeValue("white", "gray.800");
@@ -16,18 +19,17 @@ const Header = () => {
             sm: 4,
           }}
           py={4}
-          //shadow="md"
         >
           <Flex alignItems="center" justifyContent="space-between" mx="auto">
             <Flex>
               <chakra.a
                 href="/"
-                title="Startup in SEA"
+                title="SEASU"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
               >
-                <Image h={10} src="https://i.ibb.co/GP52gN8/sea-1840.png" alt="logo"/>
+                <Image height={10} width={170} src={logo} alt="logo"/>
                 <VisuallyHidden>SEASU</VisuallyHidden>
               </chakra.a>
               {/* <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">

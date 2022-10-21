@@ -5,6 +5,7 @@ import { table, minifyRecords } from './api/utils/airtable';
 import Toolbar from '../components/toolbar';
 import { Flex } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
+import Head from 'next/head' 
 
 export default function Home(props) {
   const loadData = props.load 
@@ -44,6 +45,15 @@ export default function Home(props) {
 
   return (
     <>
+      <Head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"></link>
+        <title>SEA Startup Directory</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+      </Head>
       <Banner></Banner>
       <Header></Header>
       <Flex direction={"column"} pt={7} align={"center"}>

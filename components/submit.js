@@ -1,4 +1,5 @@
 import { Button, Modal, ModalContent, ModalOverlay, useDisclosure } from "@chakra-ui/react";
+import { MdBrandingWatermark } from "react-icons/md";
 import Forms from "./forms";
 
 // to open up forms use onClick="{onOpen}"
@@ -10,7 +11,7 @@ const Submit = ()=>{
     }
     return(
         <>
-        <Button color={"white"} bg={"#07956c"} fontWeight="bold" size="sm" onClick={goToEmail}>
+        <Button color={"white"} bg={"brand.secondary"} fontWeight="bold" size="sm" onClick={goToEmail}>
             Contact Us
         </Button>
         {/* <Modal isOpen={isOpen} onClose={onClose}>
